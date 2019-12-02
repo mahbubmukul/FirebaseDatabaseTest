@@ -49,15 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 for(DataSnapshot dataSnapshot1 :dataSnapshot.getChildren()){
 
                     User userdetails = dataSnapshot1.getValue(User.class);
-                    User listdata = new User();
-                    String name=userdetails.getName();
-                    String email=userdetails.getEmail();
-                    String address=userdetails.getAddress();
-                    listdata.setName(name);
-                    listdata.setEmail(email);
-                    listdata.setAddress(address);
-                    list.add(listdata);
-                    // Toast.makeText(MainActivity.this,""+name,Toast.LENGTH_LONG).show();
+                    list.add(userdetails);
 
                 }
 
